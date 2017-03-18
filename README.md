@@ -13,6 +13,8 @@
   - 数据存储在 `./game play/human/`
 + gameoverCLF.py
   - 用于判断截屏是不是game over
+  - 使用 Keras 2.0 API 
+  - h5 文件位于 `./game play/clf/`
 + analyze.ipynb
   - 提供简易分析，检查capture是否符合DQN的要求
 + preprocess.ipynb
