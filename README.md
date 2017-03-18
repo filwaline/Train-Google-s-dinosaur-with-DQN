@@ -1,4 +1,5 @@
 # Train-Google-s-dinosaur-with-DQN
+使用Deep Q Learning训练Google Chrome离线小恐龙。
 
 ## game play
 包含了用于获取人类游戏数据的脚本。
