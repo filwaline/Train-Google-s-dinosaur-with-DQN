@@ -29,8 +29,8 @@ Deep Q Learning的架构，不包括神经网络定义
   - 把从生成器中获取的trans存入experiences，随机生成minibatch，反复调用backward进行学习
 + backward(self)
   - 目标函数是最小化 predict_Q 与 reward + future_maxQ 的差
-  - 遇到terminal state时不计算future_maxQ
+  - 遇到terminal state时不计算future_maxQ
 + forward(self,state)
   - state 要经过预处理，大小应为（30,150,4）
-  - 探索模式分 ε-greedy method 和 softmax action selection
-  - softmax 参数不好调，不建议使用
+  - 探索模式分 ε-greedy method 和 softmax action selection
+  - softmax 参数不好调，不建议使用
