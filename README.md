@@ -29,10 +29,13 @@
 
 ## deepQnetwork.py
 Deep Q Learning的架构，不包括神经网络定义
+
 需要从外部传入神经网络定义，和其他一些参数
+
+### 对象方法
 + learn(self,transGen)
   - 从已有的transitions中学习，需要传入生成器
-  - 把从生成器中获取的trans存入experiences，随机生成minibatch，反复调用backward进行学习
+  - 把从生成器中获取的trans存入经验池experiences，随机生成minibatch，反复调用backward进行学习
 + backward(self)
   - 目标函数是最小化 predict_Q 与 reward + future_maxQ 的差
   - 遇到terminal state时不计算future_maxQ
@@ -41,5 +44,31 @@ Deep Q Learning的架构，不包括神经网络定义
   - 探索模式分 ε-greedy method 和 softmax action selection
   - softmax 参数不好调，不建议使用
 
+### 参数说明
++ discount
+  - gamma，或折现率
++ experienceSize
+  - 经验池的最大容量
++ startLearningThreshold
+  - 经验池存储多少样本后才开始学习
++ explorationMode
+  - ε-greedy method
+  - softmax action selection
++ temperature
+  - softmax 参数
+  - https://en.wikipedia.org/wiki/Softmax_function
++ minEpsilon
+  - ε-greedy method 参数
+  - 最小探索率
++ randomStartup
+  - ε-greedy method 参数
+  - 初始完全随机的步数
++ stepsUntilReachMinEpsilon
+  - ε-greedy method 参数
+  - 降到最低探索率所需步数
++ distribution
+  - ε-greedy method 参数
+  - 选择action的概率分布，默认为均等分布
+  
 ## interaction.py
 实现与windows系统的交互，窗口聚焦，模拟按键
