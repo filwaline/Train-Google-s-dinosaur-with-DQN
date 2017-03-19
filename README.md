@@ -1,6 +1,12 @@
 # Train-Google-s-dinosaur-with-DQN
 使用Deep Q Learning训练Google Chrome离线小恐龙。
 
+参考资料：
++ [DQN 从入门到放弃](https://zhuanlan.zhihu.com/p/21262246)
++ [Guest Post (Part I): Demystifying Deep Reinforcement Learning](https://www.nervanasys.com/demystifying-deep-reinforcement-learning/)
++ [Reinforcement Learning: An Introduction - Sutton](http://people.inf.elte.hu/lorincz/Files/RL_2006/SuttonBook.pdf)
++ [UCL Reinforcement Learning Lecture - David Silver](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
+
 ## game play
 包含了用于获取人类游戏数据的脚本。
 
