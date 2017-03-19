@@ -34,3 +34,6 @@ Deep Q Learning的架构，不包括神经网络定义
   - state 要经过预处理，大小应为（30,150,4）
   - 探索模式分 ε-greedy method 和 softmax action selection
   - softmax 参数不好调，不建议使用
+
+## interaction.py
+实现与windows系统的交互，窗口聚焦，模拟按键
